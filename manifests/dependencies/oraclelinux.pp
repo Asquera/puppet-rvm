@@ -22,4 +22,6 @@ class rvm::dependencies::oraclelinux {
   if ! defined(Package['readline-devel'])  { package { 'readline-devel':  ensure => present } }
   if ! defined(Package['patch'])           { package { 'patch':           ensure => present } }
   if ! defined(Package['git'])             { package { 'git':             ensure => present } }
+  if ! defined(Package['ant'])             { package { 'ant':             ensure => installed } }
+  if ! defined(Package['ant-apache-regexp']) { package { 'ant-apache-regexp': ensure => installed } }
 }

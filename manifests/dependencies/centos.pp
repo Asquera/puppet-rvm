@@ -35,4 +35,6 @@ class rvm::dependencies::centos {
   if ! defined(Package['libffi-devel'])    { package { 'libffi-devel':    ensure => present } }
   if ! defined(Package['libtool'])         { package { 'libtool':         ensure => present } }
   if ! defined(Package['bison'])           { package { 'bison':           ensure => present } }
+  if ! defined(Package['ant'])             { package { 'ant':             ensure => installed } }
+  if ! defined(Package['ant-apache-regexp'])             { package { 'ant-apache-regexp':             ensure => installed } }
 }

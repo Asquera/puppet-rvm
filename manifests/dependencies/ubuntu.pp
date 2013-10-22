@@ -18,5 +18,6 @@ class rvm::dependencies::ubuntu {
   if ! defined(Package['libxslt1-dev'])         { package { 'libxslt1-dev':         ensure => present, alias => 'libxslt-dev' } }
   if ! defined(Package['autoconf'])             { package { 'autoconf':             ensure => present } }
   if ! defined(Package['libc6-dev'])            { package { 'libc6-dev':            ensure => present } }
-
+  if ! defined(Package['ant'])                  { package { 'ant':                  ensure => installed } }
+  if ! defined(Package['ant-apache-regexp'])    { package { 'ant-contrib':          ensure => installed } }
 }
